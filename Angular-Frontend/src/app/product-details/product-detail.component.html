@@ -1,0 +1,36 @@
+
+
+<h3 id="tableLabel"  class="d-flex justify-content-center">Product Details</h3>
+<div class="row  d-flex justify-content-center">
+    <div class="col-10">
+
+    <div class="form-group justify-content-left">
+        <label for="txtpname">Product Name</label> 
+        <input id="txtpname" class="form-control"  [(ngModel)]="product.name"/>
+     </div>
+     <div class="form-group">
+         <label for="txtpDescription">Product Description</label> 
+         <input id="txtpDescription" class="form-control" type="text" [(ngModel)]="product.description" />
+      </div>
+      <div class="form-group">
+          <label for="txtpvender">Product Vender</label> 
+          <input id="txtpvender" class="form-control" type="text" [(ngModel)]="product.vender" />
+       </div>
+       <div class="form-group">
+           <label for="txtpstock">Product Stock</label> 
+           <input id="txtpstock" class="form-control" type="number" [(ngModel)]="product.stock" />
+        </div>
+       <div class="form-group">
+           <label for="txtppurchaseRate">Product Purchase RAte</label> 
+           <input id="txtppurchaseRate" class="form-control" type="number" [(ngModel)]="product.purchaseRate" />
+        </div>
+        <div class="form-group">
+            <label for="txtpsellingRate">Product Selling Rate</label> 
+            <input id="txtpsellingRate" class="form-control" type="number" [(ngModel)]="product.sellingRate" />
+         </div>
+      <button class="btn btn-primary" (click)="Save()">Save</button>
+      <a  [routerLink]="['/list']" class ="btn btn-outline-primary m-1">Back to list</a>
+</div>
+  </div>
+
+

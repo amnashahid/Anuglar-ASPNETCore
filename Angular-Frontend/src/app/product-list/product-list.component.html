@@ -1,0 +1,28 @@
+<h3 id="tableLabel"  class="d-flex justify-content-center">Product Listing</h3>
+
+<div class="d-flex justify-content-end m-2">
+<a  [routerLink]="['/add']" class ="btn btn-primary justify-content-right">Add new</a>
+</div>
+<p *ngIf="!products"><em>Loading...</em></p>
+
+<table class='table'  *ngIf="products">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Vender</th>
+      <th>Stock</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.vender }}</td>
+      <td>{{ product.stock }}</td>
+      <td><a [routerLink]="['/details', product.id]" ><i class="bi bi-pencil"></i></a>
+         <a href="javascript:void(0)" (click)="delete(product.id)"><i class="bi bi-trash m-2"></i></a></td>
+    </tr>
+  </tbody>
+</table>
